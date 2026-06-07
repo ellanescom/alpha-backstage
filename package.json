@@ -51,7 +51,9 @@
   "resolutions": {
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "protobufjs": "^7.6.0"
+    "protobufjs": "^7.6.0",
+    "tar": "^7.5.11",
+    "js-cookie": "^3.0.7"
   },
   "prettier": "@backstage/cli/config/prettier",
   "lint-staged": {

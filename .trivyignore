@@ -1,0 +1,4 @@
+# CVE-2026-2229: undici Denial of Service via invalid WebSocket frame
+# No fix available as of 2026-06-07. undici is a transitive Backstage dev
+# dependency used only at build time — not present in the production container.
+CVE-2026-2229
