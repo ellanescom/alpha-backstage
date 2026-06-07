@@ -7808,10 +7808,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@protobufjs/inquire@npm:^1.1.2":
+"@protobufjs/inquire@npm:1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/inquire@npm:1.1.2"
   checksum: 10c0/af69597818a14cac6a00a74cd5b3fb85aa96658b9dbbae73e6d907cb154ebf470953a8c537b3e6095a43de565ec4e6c5b40227c72f4a7d762d34fbec7ac179e7
+  languageName: node
+  linkType: hard
+
+"@protobufjs/inquire@patch:@protobufjs/inquire@npm%3A1.1.2#~/.yarn/patches/@protobufjs-inquire-npm-1.1.2-d8a203d287.patch":
+  version: 1.1.2
+  resolution: "@protobufjs/inquire@patch:@protobufjs/inquire@npm%3A1.1.2#~/.yarn/patches/@protobufjs-inquire-npm-1.1.2-d8a203d287.patch::version=1.1.2&hash=0d650a"
+  checksum: 10c0/30bc7879ac21061edd4fe3818d67f2ba7d778156eb823dd88e5bfc6b9d16a3d1f8fe7b82f5b2552cae931acbfdd88e5c2886b3d3292464587fe249589f80917b
   languageName: node
   linkType: hard
 

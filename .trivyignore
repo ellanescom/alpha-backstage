@@ -2,3 +2,9 @@
 # No fix available as of 2026-06-07. undici is a transitive Backstage dev
 # dependency used only at build time — not present in the production container.
 CVE-2026-2229
+
+# CVE-2026-1526: undici@5.29.0 vulnerability
+# urllib@3 requires undici@^5.28.2; bumping to 6.x would be a breaking API
+# change. undici is a transitive dev dependency not present in the production
+# container image. Monitor for a urllib update that moves off undici@5.
+CVE-2026-1526

@@ -1,0 +1,42 @@
+diff --git a/index.js b/index.js
+index 956afd0b8da967f39975ccd3980e20e5abc40f04..506c87d90b978e30783bf44373f0a894832016fc 100644
+--- a/index.js
++++ b/index.js
+@@ -9,30 +9,11 @@ module.exports = inquire;
+  * @deprecated Legacy optional require helper. Will be removed in a future release.
+  */
+ function inquire(moduleName) {
+-  try {
+-    if (typeof require !== "function") {
+-      return null;
+-    }
+-    var mod = require(moduleName);
+-    if (mod && (mod.length || Object.keys(mod).length)) return mod;
+-    return null;
+-  } catch (err) {
+-    // ignore
+-    return null;
+-  }
++  // Dynamic require replaced with a no-op stub. The original used
++  // require(moduleName) with a variable argument, triggering a webpack/Rspack
++  // "Critical dependency" error in CI. All modules protobufjs passes here are
++  // Node.js-only; they are never available in a browser bundle, so this always
++  // returned null anyway.
++  void moduleName;
++  return null;
+ }
+-
+-/*
+-// maybe worth a shot to prevent renaming issues:
+-// see: https://github.com/webpack/webpack/blob/master/lib/dependencies/CommonJsRequireDependencyParserPlugin.js
+-// triggers on:
+-// - expression require.cache
+-// - expression require (???)
+-// - call require
+-// - call require:commonjs:item
+-// - call require:commonjs:context
+-
+-Object.defineProperty(Function.prototype, "__self", { get: function() { return this; } });
+-var r = require.__self;
+-delete Function.prototype.__self;
+-*/
